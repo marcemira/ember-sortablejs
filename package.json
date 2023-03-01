@@ -30,12 +30,12 @@
     "cypress:open": "cypress open"
   },
   "dependencies": {
-    "@ember/render-modifiers": "^1.0.2",
-    "@glimmer/component": "^1.0.0",
-    "@glimmer/tracking": "^1.0.0",
-    "ember-auto-import": "^1.5.3",
-    "ember-cli-babel": "^7.18.0",
-    "ember-cli-htmlbars": "^4.2.0",
+    "@ember/render-modifiers": "^2.0.0",
+    "@glimmer/component": "^1.1.2",
+    "@glimmer/tracking": "^1.1.2",
+    "ember-auto-import": "^2.0.0",
+    "ember-cli-babel": "^7.26.11",
+    "ember-cli-htmlbars": "^6.2.0",
     "ember-element-helper": "^0.2.0"
   },
   "devDependencies": {
@@ -71,7 +71,8 @@
     "qunit-dom": "^0.9.2",
     "sortablejs": "^1.10.2",
     "tailwindcss": "^1.2.0",
-    "wait-on": "^4.0.1"
+    "wait-on": "^4.0.1",
+    "webpack": "^5.75.0"
   },
   "peerDependencies": {
     "sortablejs": ">= 1.10.2 < 2"
