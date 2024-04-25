@@ -16,8 +16,8 @@ const purgeCSS = {
   }
 };
 
-module.exports = function(defaults) {
-  let app = new EmberAddon(defaults, {
+module.exports = function (defaults) {
+  const app = new EmberAddon(defaults, {
     // Add options here
     postcssOptions: {
       compile: {
@@ -42,5 +42,12 @@ module.exports = function(defaults) {
     behave. You most likely want to be modifying `./index.js` or app's build file
   */
 
-  return app.toTree();
+  const { maybeEmbroider } = require('@embroider/test-setup');
+  return maybeEmbroider(app, {
+    skipBabel: [
+      {
+        package: 'qunit',
+      },
+    ],
+  });
 };

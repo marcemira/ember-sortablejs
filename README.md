@@ -5,8 +5,7 @@ ember-sortablejs
 
 This addon allows you to use drag and drop in your ember application using [SortableJS/Sortable](https://github.com/SortableJS/Sortable)
 
-Compatibility
-------------------------------------------------------------------------------
+## Compatibility
 
 * Ember.js v3.13 or above
 * Ember CLI v3.13 or above
@@ -35,8 +34,7 @@ Currently supported:
 - [ ] Multi Drag
 - [ ] Nested List
 
-Usage
-------------------------------------------------------------------------------
+## Usage
 
 ```hbs
 {{!-- this.list = [{ name: 'item one' }, { name: 'item two' },..]  --}}
