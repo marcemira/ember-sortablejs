@@ -1,7 +1,7 @@
 import Component from '@glimmer/component';
 import Sortable from 'sortablejs';
 import { bind, next } from '@ember/runloop';
-import { action } from '@ember/object';
+import { action, get, set } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import { move, insertAt, removeFrom } from 'ember-sortablejs/utils/array-utils';
 import { inject as service } from '@ember/service';
@@ -42,7 +42,7 @@ export default class SortableJsComponent extends Component {
   }
 
   get mappedList() {
-    return this.list.map((item) => this.cachedIdentity.get(item));
+    return this.list.map((item) => get(this.cachedIdentity, item));
   }
 
   @action
@@ -167,7 +167,7 @@ export default class SortableJsComponent extends Component {
 
   setIdentity(obj) {
     if (obj && (typeof obj === 'object')) {
-      this.cachedIdentity.set(obj, { value: obj });
+      set(this.cachedIdentity, obj, { value: obj });
     }
   }
 
