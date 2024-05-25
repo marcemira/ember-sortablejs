@@ -42,7 +42,7 @@ export default class SortableJsComponent extends Component {
   }
 
   get mappedList() {
-    return this.list.map((item) => get(this.cachedIdentity, item));
+    return this.list.map((item) => this.cachedIdentity.get(item));
   }
 
   @action
@@ -167,7 +167,7 @@ export default class SortableJsComponent extends Component {
 
   setIdentity(obj) {
     if (obj && (typeof obj === 'object')) {
-      set(this.cachedIdentity, obj, { value: obj });
+      this.cachedIdentity.set(obj, { value: obj });
     }
   }
 
